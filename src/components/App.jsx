@@ -7,11 +7,14 @@ import { Container } from './App.styled';
 import { Statistic } from './statistics/statistics';
 import { FriendList } from './friendList/friendList';
 import { TransactionHistory } from './transactionHistory/transactionHistory';
+import { Counter } from './Counter/counter'
 
 
 export const App = () => {
   return (
     <Container>
+      <Counter />
+
       <Profile
         key={user.username}
         username={user.username}
