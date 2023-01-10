@@ -36,7 +36,7 @@ export const TransactionsTr = styled.tr`
 `;
 
 export const TransactionsTd = styled.td`
-  padding: 12px 15px;
+  padding: 10px 15px;
   width: 80px;
   border: solid 1px #ccc;
 `;
