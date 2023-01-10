@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const TransactionDiv = styled.div`
   position: absolute;
   top: 0;
-  right: 0;
+  left: 360px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
