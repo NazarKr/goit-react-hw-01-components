@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const TransactionDiv = styled.div`
-         position: absolute;
-         top: 0;
-         right: 0;
-         margin-right: auto;
-         margin-left: auto;
-         margin-bottom: 30px;
-         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
-         background-color: rgba(243, 246, 249, 1);
-       `;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+  background-color: rgba(243, 246, 249, 1);
+`;
 
 export const TransactionsDivTable = styled.table`
   //  max-width: 240px;
@@ -36,7 +36,7 @@ export const TransactionsTr = styled.tr`
 `;
 
 export const TransactionsTd = styled.td`
-         padding: 12px 15px;
-         width: 80px;
-         border: solid 1px #ccc;
-       `;
+  padding: 12px 15px;
+  width: 80px;
+  border: solid 1px #ccc;
+`;
