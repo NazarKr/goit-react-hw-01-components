@@ -6,15 +6,16 @@ export const TransactionDiv = styled.div`
   left: 360px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 25px;
   margin-bottom: 30px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
-  background-color: rgba(243, 246, 249, 1);
+  border-radius: 5px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 `;
 
 export const TransactionsDivTable = styled.table`
   //  max-width: 240px;
   border-collapse: collapse;
-  margin: 25px 0;
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
