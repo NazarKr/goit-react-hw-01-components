@@ -21,7 +21,8 @@ export const UserStatUl = styled.ul`
   background-color: rgba(243, 246, 249, 1);
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 `;
 
 export const UserStarLi = styled.li`
