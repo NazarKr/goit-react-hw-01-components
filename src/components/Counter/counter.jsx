@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Buttons } from './buttons';
 
-export class Counter extends Component {
+class Counter extends Component {
   static defaultProps = {
     initirialValue: 5,
     step: 1,
@@ -39,3 +39,5 @@ export class Counter extends Component {
     );
   }
 }
+
+export default Counter;

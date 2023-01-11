@@ -7,14 +7,12 @@ import { Container } from './App.styled';
 import { Statistic } from './statistics/statistics';
 import { FriendList } from './friendList/friendList';
 import { TransactionHistory } from './transactionHistory/transactionHistory';
-import { Counter } from './Counter/counter'
-
+import Counter from './Counter/counter';
+import Dropdown from './Dropdown/dropdown';
 
 export const App = () => {
   return (
     <Container>
-      <Counter />
-
       <Profile
         key={user.username}
         username={user.username}
@@ -26,6 +24,10 @@ export const App = () => {
       <Statistic />
       <FriendList friends={friend} />
       <TransactionHistory items={transactions} />
+
+      <Counter />
+      <Dropdown />
+      
     </Container>
   );
 };
