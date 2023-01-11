@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Box from '../profile/Box';
 import { DropdownDiv, DropdownMenu } from './dropdown.styled';
+import { TodoListButton } from '../Todo/todolist.styled';
 
 class Dropdown extends Component {
   state = {
@@ -33,12 +34,12 @@ const { visible } = this.state;
                 display="flex"
       >
               <DropdownDiv>
-        <button
+        <TodoListButton
           type="button"
           className="Dropdown__toggle"
           onClick={this.toggle}>
           {visible ? 'Сховати' : 'Показати'}
-        </button>
+        </TodoListButton>
 
 
         {visible && (<DropdownMenu>Выпадающее меню</DropdownMenu>)}
