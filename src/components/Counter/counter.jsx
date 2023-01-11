@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Box from '../profile/Box';
 import { Buttons } from './buttons';
 
 class Counter extends Component {
@@ -27,15 +28,17 @@ class Counter extends Component {
     const { step } = this.props;
 
     return (
-      <div>
-        <span>{this.state.value}</span>
-        <br />
-        <Buttons
-          onIncrement={this.hendleIncrement}
-          onDecrement={this.hendleDecrement}
-          onStep={step}
-        />
-      </div>
+      <Box bg="backGround" ml="2" mr="2" width="100%" display="flex">
+        <div>
+          <span>{this.state.value}</span>
+          <br />
+          <Buttons
+            onIncrement={this.hendleIncrement}
+            onDecrement={this.hendleDecrement}
+            onStep={step}
+          />
+        </div>
+      </Box>
     );
   }
 }
