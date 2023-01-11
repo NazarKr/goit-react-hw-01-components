@@ -6,7 +6,7 @@ export const DropdownDiv = styled.div`
   padding: 20px;
   border: 1px solid black;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 `;
 
 export const DropdownMenu = styled.div`
@@ -14,7 +14,7 @@ export const DropdownMenu = styled.div`
   top: 100%;
   left: 0;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0px;
   text-align: center;
   background-color: teal;
   color: white;

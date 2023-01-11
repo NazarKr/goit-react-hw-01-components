@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Box from '../profile/Box';
 import initialTodos from '../Todo/todos.json';
 import TodoListItem from './todolistiem';
+import { TodoListDiv, TodoListTotalP } from './todolist.styled';
 
 class TodoList extends Component {
   state = {
@@ -24,22 +25,19 @@ class TodoList extends Component {
     );
 
     return (
-      <>
-            <Box
-                bg="backGround"
-                ml="2"
-                mr="2"
-                width="100%"
-                display="flex"
-            >
-          <div>
-            <p>Загальна кількість: {totalTodo} </p>
-            <p>Виконані кількість: {completeTodo} </p>
-            
-          </div>
+        <Box
+            bg="backGround"
+            ml="2"
+            mr="2"
+            width="100%"
+            display="flex"
+        >
+        <TodoListDiv>
+          <TodoListTotalP>Загальна кількість: {totalTodo} </TodoListTotalP>
+          <TodoListTotalP>Виконані кількість: {completeTodo} </TodoListTotalP>
           <TodoListItem todos={todos} onDeleteTodo={this.deleteTodo} />
-        </Box>
-      </>
+        </TodoListDiv>
+      </Box>
     );
   }
 }

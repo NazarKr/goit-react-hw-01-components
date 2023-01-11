@@ -25,19 +25,26 @@ class Dropdown extends Component {
 const { visible } = this.state;
 
     return (
-      <Box bg="backGround" ml="2" mr="2" width="100%" display="flex">
-        <DropdownDiv>
-          <button
-            type="button"
-            className="Dropdown__toggle"
-            onClick={this.toggle}
-          >
-            {visible ? 'Сховати' : 'Показати'}
-          </button>
+                  <Box
+                bg="backGround"
+                ml="2"
+                mr="2"
+                width="100%"
+                display="flex"
+      >
+              <DropdownDiv>
+        <button
+          type="button"
+          className="Dropdown__toggle"
+          onClick={this.toggle}>
+          {visible ? 'Сховати' : 'Показати'}
+        </button>
 
-          {visible && <DropdownMenu>Выпадающее меню</DropdownMenu>}
-        </DropdownDiv>
-      </Box>
+
+        {visible && (<DropdownMenu>Выпадающее меню</DropdownMenu>)}
+      </DropdownDiv>
+            </Box>
+
     );
   }
 }

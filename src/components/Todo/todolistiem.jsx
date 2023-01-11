@@ -1,12 +1,17 @@
 import React from 'react';
-import { TodoListUl, TodoListLi, TodoListP } from './todolist.styled';
+import {
+  TodoListUl,
+  TodoListLi,
+  TodoListP,
+  TodoListButton,
+} from './todolist.styled';
 
 const TodoListItem = ({ todos, onDeleteTodo }) => (
   <TodoListUl>
     {todos.map(({ id, text }) => (
       <TodoListLi key={id}>
         <TodoListP>{text}</TodoListP>
-        <button onClick={() => onDeleteTodo(id)}>Видалити</button>
+        <TodoListButton onClick={() => onDeleteTodo(id)}>Видалити</TodoListButton>
       </TodoListLi>
     ))}
   </TodoListUl>
