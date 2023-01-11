@@ -9,6 +9,7 @@ import { FriendList } from './friendList/friendList';
 import { TransactionHistory } from './transactionHistory/transactionHistory';
 import Counter from './Counter/counter';
 import Dropdown from './Dropdown/dropdown';
+import TodoList from './Todo/todolist';
 
 export const App = () => {
   return (
@@ -27,7 +28,7 @@ export const App = () => {
 
       <Counter />
       <Dropdown />
-      
+      <TodoList />
     </Container>
   );
 };
