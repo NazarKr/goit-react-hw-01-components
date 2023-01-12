@@ -16,9 +16,14 @@ class TodoList extends Component {
     }));
   };
 
+  toggleCompleted = todoId => {
+    this.setState(({ todos }) => ({
+      todos: todos.map(todo => todo.id ===todoId ? {...todo, competed: !todo.completed} : todo,)
+    }))
+  }
+
   render() {
     const { todos } = this.state;
-
     const totalTodo = todos.length;
     const completeTodo = todos.reduce(
       (acc, todo) => (todo.completed ? acc + 1 : acc),
@@ -36,7 +41,11 @@ class TodoList extends Component {
         <TodoListDiv>
           <TodoListTotalP>Загальна кількість: {totalTodo} </TodoListTotalP>
           <TodoListTotalP>Виконані кількість: {completeTodo} </TodoListTotalP>
-          <TodoListItem todos={todos} onDeleteTodo={this.deleteTodo} />
+          <TodoListItem
+            todos={todos}
+            onDeleteTodo={this.deleteTodo}
+            onToggleCompleted={this.toggleCompleted}
+          />
         </TodoListDiv>
       </Box>
     );

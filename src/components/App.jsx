@@ -10,6 +10,7 @@ import { TransactionHistory } from './transactionHistory/transactionHistory';
 import Counter from './Counter/counter';
 import Dropdown from './Dropdown/dropdown';
 import TodoList from './Todo/todolist';
+import Form from './Forms/formName';
 
 export const App = () => {
   return (
@@ -26,6 +27,7 @@ export const App = () => {
       <FriendList friends={friend} />
       <TransactionHistory items={transactions} />
 
+      <Form />
       <Counter />
       <Dropdown />
       <TodoList />

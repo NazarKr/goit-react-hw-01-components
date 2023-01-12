@@ -6,12 +6,27 @@ import {
   TodoListButton,
 } from './todolist.styled';
 
-const TodoListItem = ({ todos, onDeleteTodo }) => (
+const TodoListItem = ({ todos, onDeleteTodo, onToggleCompleted }) => (
   <TodoListUl>
-    {todos.map(({ id, text }) => (
-      <TodoListLi key={id}>
+    {todos.map(({ id, text, completed }) => (
+      <TodoListLi
+        key={id}
+
+        // className
+      >
+        <input
+          type="checkbox"
+          // className="TodoList__checkbox"
+          checked={completed}
+          onChange={() => onToggleCompleted(id)}
+        />
         <TodoListP>{text}</TodoListP>
-        <TodoListButton onClick={() => onDeleteTodo(id)}>Видалити</TodoListButton>
+        <TodoListButton
+          type="button"
+          onClick={() => onDeleteTodo(id)}
+        >
+          Видалити
+        </TodoListButton>
       </TodoListLi>
     ))}
   </TodoListUl>
