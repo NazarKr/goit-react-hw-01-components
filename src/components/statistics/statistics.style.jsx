@@ -5,6 +5,7 @@ export const UserStatDiv = styled.div`
   flex-direction: column;
   text-align: center;
   min-width: 240px;
+  margin-top: 20px;
   margin-bottom: 20px;
 `;
 
