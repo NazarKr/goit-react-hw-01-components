@@ -1,17 +1,22 @@
 import React from 'react';
 import user from './profile/user.json';
 import friend from './friendList/friends.json';
-import transactions from './transactionHistory/transactions.json';
+// import transactions from './transactionHistory/transactions.json';
 import { Profile } from './profile/profile';
 import { Container } from './App.styled';
 import { Statistic } from './statistics/statistics';
 import { FriendList } from './friendList/friendList';
-import { TransactionHistory } from './transactionHistory/transactionHistory';
+// import { TransactionHistory } from './transactionHistory/transactionHistory';
+import { Basic } from './forms/Formic';
+import { MyForm } from './forms/MyForm';
 
 
 export const App = () => {
   return (
     <Container>
+      <Basic />
+      <MyForm />
+
       <Profile
         key={user.username}
         username={user.username}
@@ -22,7 +27,7 @@ export const App = () => {
       />
       <Statistic />
       <FriendList friends={friend} />
-      <TransactionHistory items={transactions} />
+      {/* <TransactionHistory items={transactions} /> */}
     </Container>
   );
 };
