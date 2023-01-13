@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as yup from 'yup';
+import ButtonHovers from '../Buttons/ButtonHover';
 
 let schema = yup.object().shape({
   login: yup.string().required(),
@@ -35,7 +36,7 @@ export const MyForm = () => {
             <Field type="password" name="password" />
             <ErrorMessage name="password" />
           </label>
-          <button type="submit">Submit</button>
+          <ButtonHovers type="submit" title="Submit"></ButtonHovers>
         </Form>
       </Formik>
     );

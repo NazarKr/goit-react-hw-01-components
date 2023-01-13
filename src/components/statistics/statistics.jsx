@@ -12,7 +12,7 @@ export const Statistic = ({ title }) => (
     mr="2"
     width="100%"
     display="flex"
-  >
+    >
     <UserStatDiv>
       {title && <StatisticTitle>{title}</StatisticTitle>}
       <Statisticlist stats={data}></Statisticlist>
