@@ -2,6 +2,8 @@ import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import ButtonHovers from '../Buttons/ButtonHover';
+import { DatePicker, Button, Space } from 'antd';
+
 
 let schema = yup.object().shape({
   login: yup.string().required(),
@@ -20,24 +22,30 @@ export const MyForm = () => {
     }
 
     return (
-      <Formik
-        initialValues={initialValue}
-        onSubmit={hendleSubmit}
-        validationSchema={schema}
-      >
-        <Form autoComplete="off">
-          <label htmlFor="login">
-            Login
-            <Field type="text" name="login" />
-            <ErrorMessage name="login" />
-          </label>
-          <label htmlFor="password">
-            Password
-            <Field type="password" name="password" />
-            <ErrorMessage name="password" />
-          </label>
-          <ButtonHovers type="submit" title="Submit"></ButtonHovers>
-        </Form>
-      </Formik>
+      <>
+        <Space wrap>
+          <Button type="primary">Primary Button</Button>
+        </Space>
+        <DatePicker />
+        <Formik
+          initialValues={initialValue}
+          onSubmit={hendleSubmit}
+          validationSchema={schema}
+        >
+          <Form autoComplete="off">
+            <label htmlFor="login">
+              Login
+              <Field type="text" name="login" />
+              <ErrorMessage name="login" />
+            </label>
+            <label htmlFor="password">
+              Password
+              <Field type="password" name="password" />
+              <ErrorMessage name="password" />
+            </label>
+            <ButtonHovers type="submit" title="Submit"></ButtonHovers>
+          </Form>
+        </Formik>
+      </>
     );
 }
