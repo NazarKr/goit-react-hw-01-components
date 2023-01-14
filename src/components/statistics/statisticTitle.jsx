@@ -4,9 +4,9 @@ import {UserStatTitle} from './statistics.style'
 
 
 export const StatisticTitle = ({ title }) => (
-    <>
+    
         <UserStatTitle>{title}</UserStatTitle>
-    </>
+    
 );
 
 StatisticTitle.propTypes = {
