@@ -1,16 +1,17 @@
 import React from 'react';
-import Box from '../profile/Box';
 import { FriendListUl } from './friendList.styled';
 import { FriendListItem } from './friendListItem';
 
-export const FriendList = ({ friends }) => (
-         <Box
-           bg="backGround"
-           ml="2"
-           mr="2"
-           width="100%"
-           display="flex"
-         >
+interface FriendListProps {
+    friends: Array<{
+        id: number;
+        isOnline: boolean;
+        avatar: string;
+        name: string;
+    }>
+}
+
+export const FriendList: React.FC<FriendListProps> = ({ friends }) => (
            <FriendListUl>
              {friends.map(({ id, isOnline, avatar, name }) => (
                <FriendListItem
@@ -21,5 +22,4 @@ export const FriendList = ({ friends }) => (
                />
              ))}
            </FriendListUl>
-         </Box>
        );

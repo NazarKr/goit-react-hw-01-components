@@ -1,10 +1,16 @@
 import React from 'react';
 import { StatisticItem } from './statisticItem';
-import PropTypes from 'prop-types';
 import { UserStatUl } from './statistics.style';
 
+interface StatisticlistProps {
+  stats: Array<{
+    id: string;
+    label: string;
+    percentage: number;
+  }>;
+}
 
-export const Statisticlist = ({ stats }) => {
+export const Statisticlist: React.FC<StatisticlistProps> = ({ stats }) => {
   return (
     <UserStatUl>
       {stats.map(({ id, label, percentage }) => (
@@ -12,14 +18,4 @@ export const Statisticlist = ({ stats }) => {
       ))}
     </UserStatUl>
   );
-};
-
-Statisticlist.propTypes = {
-  stats: PropTypes.arrayOf(
-    PropTypes.exact({
-      id: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-      percentage: PropTypes.number.isRequired,
-    })
-  ),
 };

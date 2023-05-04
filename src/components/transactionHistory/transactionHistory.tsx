@@ -2,7 +2,18 @@ import React from 'react';
 import { TransactionDiv, TransactionsDivTable, TransactionsTh, TransactionsThead, } from './transaction.styled';
 import { TransactionsTable } from './transactionsTable';
 
-export const TransactionHistory = ({ items }) => (
+interface TransactionHistoryProps {
+  id: string;
+  type: string;
+  amount: string;
+  currency: string;
+}
+
+interface TransactionItems {
+  items: TransactionHistoryProps[];
+}
+
+export const TransactionHistory: React.FC<TransactionItems> = ({ items }) => (
   <TransactionDiv>
     <TransactionsDivTable>
       <TransactionsThead>

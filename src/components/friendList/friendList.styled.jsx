@@ -51,4 +51,5 @@ export const FriendName = styled.p`
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 12px;
+  color: blueviolet;
 `;
