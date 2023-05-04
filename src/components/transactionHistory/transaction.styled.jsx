@@ -1,20 +1,15 @@
 import styled from 'styled-components';
 
 export const TransactionDiv = styled.div`
-  position: absolute;
-  top: 0;
-  left: 360px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 25px;
   margin-bottom: 30px;
   border-radius: 5px;
   background: #e0e0e0;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 `;
 
 export const TransactionsDivTable = styled.table`
-  //  max-width: 240px;
   border-collapse: collapse;
   font-size: 0.9em;
   font-family: sans-serif;
@@ -40,4 +35,5 @@ export const TransactionsTd = styled.td`
   padding: 10px 15px;
   width: 80px;
   border: solid 1px #ccc;
+  color: gray;
 `;

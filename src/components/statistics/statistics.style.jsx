@@ -44,4 +44,5 @@ export const UserStatLabel = styled.span`
 export const UserStatPercentage = styled.span`
   font-size: 16px;
   font-weight: 700;
+  color: gray;
 `;

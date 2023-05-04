@@ -31,6 +31,7 @@ export const UserName = styled.p`
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 12px;
+  color: blueviolet;
 `;
 
 export const UserTag = styled.p`
@@ -76,4 +77,5 @@ export const UserLabel = styled.span`
 export const UserQuantity = styled.span`
   font-size: 16px;
   font-weight: 700;
+  color: grey;
 `;
